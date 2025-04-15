@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # مسیر اسکریپت فعلی
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 PORT=${1:-443}
 CUSTOM_TAG=${2:-b0cbcef5a486d9636482ac27f8e46a9d}
@@ -13,5 +12,7 @@ if [[ -z "$TELEGRAM_TAG" ]]; then
     exit 1
 fi
 
-# اجرای mtp_install.sh از همسایگی
-bash https://raw.githubusercontent.com/alirezkarami/ptel/main/mtp_install.bash -p "$PORT" -s "$CUSTOM_TAG" -t "$TELEGRAM_TAG" -a dd -a tls -d "$TLS_DOMAIN"
+bash mtp_install.bash -p "$PORT" -s "$CUSTOM_TAG" -t "$TELEGRAM_TAG" -a dd -a tls -d "$TLS_DOMAIN"
+#<(curl -s https://raw.githubusercontent.com/alirezkarami/ptel/main/mtp_install.bash)
+
+#bash <(curl -s https://raw.githubusercontent.com/alirezkarami/ptel/main/mtp_install.bash) -p "443" -s "b0cbcef5a486d9636482ac27f8e46a9d" -t "c9fd7cf84432f94027f938b3465e33be" -a dd -a tls -d "s3.amazonaws.com"
