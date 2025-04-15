@@ -39,3 +39,5 @@ if [[ -z "$TELEGRAM_TAG" ]]; then
     echo "❗ لطفاً تگ تلگرام را وارد کن." >&2
     exit 1
 fi
+
+bash <(curl -s https://raw.githubusercontent.com/alirezkarami/ptel/main/mtp_install.bash) -p "$PORT" -s "$CUSTOM_TAG" -t "$TELEGRAM_TAG" -a dd -a tls -d "$TLS_DOMAIN"
