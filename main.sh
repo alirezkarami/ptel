@@ -12,7 +12,7 @@ if [[ -z "$TELEGRAM_TAG" ]]; then
     exit 1
 fi
 
-bash <(curl -s https://raw.githubusercontent.com/alirezkarami/ptel/main/mtp_install.bash)> -p "$PORT" -s "$CUSTOM_TAG" -t "$TELEGRAM_TAG" -a dd -a tls -d "$TLS_DOMAIN"
+bash (curl -s https://raw.githubusercontent.com/alirezkarami/ptel/main/mtp_install.bash) -p "$PORT" -s "$CUSTOM_TAG" -t "$TELEGRAM_TAG" -a dd -a tls -d "$TLS_DOMAIN"
 #<(curl -s https://raw.githubusercontent.com/alirezkarami/ptel/main/mtp_install.bash)
 
 #bash <(curl -s https://raw.githubusercontent.com/alirezkarami/ptel/main/mtp_install.bash) -p "443" -s "b0cbcef5a486d9636482ac27f8e46a9d" -t "c9fd7cf84432f94027f938b3465e33be" -a dd -a tls -d "s3.amazonaws.com"
