@@ -13,5 +13,5 @@ create a proxy in https://t.me/MTProxybot and save your tag .
 
 To use the script, simply run the following command:
 
-```bash <(curl -s https://raw.githubusercontent.com/alirezkarami/ptel/main/main.sh)```
-
+```
+bash <(curl -s https://raw.githubusercontent.com/alirezkarami/ptel/main/main.sh)
